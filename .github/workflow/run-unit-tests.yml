@@ -18,6 +18,6 @@ jobs:
         node-version: 18
         cache: 'npm'
       
-    - name: rodando testes
+    - name: Rodando testes
     - run: npm ci
     - run: npm run test
