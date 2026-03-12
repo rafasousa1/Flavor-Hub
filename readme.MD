@@ -1,31 +1,49 @@
-README.md
+# API de compartilhamento de receitas 🍜
+![Fastify](https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 
-# App
+## Descrição
+Uma API de compartilhamento de receitas para uma comunidade ativa, onde é possível criar comentários e uma nota de avaliação do que achou ao executar a refeição.
 
-FlavorHub.
+Projeto desenvolvido com o framework Fastify, utilizando Prisma ORM para a interação com o banco de dados. A API permite cadastro, atualização e exclusão de receita.
 
-## Requisitos Funcionais
+## Instrução de instalação
 
-- [x] Deve ser possível se cadastrar;
-- [x] Deve ser possível se autenticar (email e senha);
-- [x] Deve ser possível obter o perfil de um usuário logado;
+### Pré-Requisitos
+- Node.js v18+
+- Fastify
+- Prisma
+- Typescript
 
-- [x] Deve ser possível cadastrar uma nova receita;
-- [x] Deve ser possível buscar uma receita pelo nome;
-- [x] Deve ser possível o usuário pode ver os detalhes de uma receita;
-- [x] Deve ser possível excluir uma receita;
+## Instrução de uso
 
-- [x] Deve ser posível um usuário cadastrar um comentário em uma receita;
-- [x] Deve ser possível vizualizar todos os comentários de uma receita;
-- [x] Deve ser possível excluir um comentário;
+1. Ferramenta de teste de API (Insomnia, Postman etc)
+2. Executar localhost:3333/recipes
 
-## Regras de Negócio
+## Endpoints 
 
-- [x] O usuário não deve se cadastrar com um e-mail existente;
-- [x] O usuário não pode registrar a mesma receita duas vezes;
- 
-## Requisitos não funcionais
+### GET Receitas, 
+```
+GET /recipes/search - Listando receitas criadas
+```
 
-- [x] A senha do usuário precisa estar criptografada;
-- [x] Os dados precisam estar persistidos em um banco PostgreSQL;
-- [x] O usuário deve ser identificado por um JWT;
+### GET detalhes de uma receita
+```
+GET /recipes/details - Listando detalhes de uma receita
+```
+
+### GET Receita pelo id
+```
+GET /recipes/:recipeId - Listando uma receita específica pelo id
+```
+
+### POST Receitas
+```
+POST /recipes - Criando uma nova receita
+```
+
+### DELETE Receitas
+```
+DELETE /recipes/:recipeId - Removendo um lutador específico pelo seu id
+```
